@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Link, Switch , NavLink} from "react-router-dom";
+
 import './App.css';
+import Menu from './Components/Menu';
+import List from './Components/List';
+import About from './Components/About';
+import CatchAll from './Components/CatchAll';
+import List1 from './Components/List1';
+import List2 from './Components/List2';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter> 
+        <div className="App">
+            <header className="App-header">
+            <Menu />
+          </header>
+          <Switch>
+            <Route path="/about" exact component={About} />
+            <Route path="/list" exact component={List} >
+                <Route path="/list1" exact component={List1} />
+                <Route path="/list2" exact component={List2} />
+
+            </Route>
+            <Route path="*" component={CatchAll} />
+          </Switch>
+          </div>
+        </BrowserRouter>
     );
   }
 }
