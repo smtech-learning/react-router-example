@@ -6,7 +6,9 @@ import '../App.css';
   return (
     <div>
           <NavLink to='/about'> About</NavLink> |
-          <NavLink to='/topics'> Topics</NavLink>
+          <NavLink to='/topics'> Topics</NavLink> |
+          <NavLink to='/list'> Lists</NavLink>
+
           
     </div>
   )

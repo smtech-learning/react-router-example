@@ -4,6 +4,8 @@ import './App.css';
 import Menu from './Components/Menu';
 import About from './Components/About';
 import Topics from './Components/Topics';
+import List from './Components/List';
+
 
 class App extends Component {
   render() {
@@ -13,7 +15,9 @@ class App extends Component {
             <Menu />
         </header>
           <Route path="/about" component={About} />
-          <Route path="/topics" component={Topics} />
+        <Route path="/topics" component={Topics} />
+        <Route path="/list" component={List} />
+        
       </BrowserRouter>
     );
   }

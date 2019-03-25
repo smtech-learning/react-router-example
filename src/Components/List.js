@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Route, Link, Switch, NavLink } from "react-router-dom";
 import List1 from './List1';
 import List2 from './List2';
-import ListCatchAll from './ListCatchAll';
 
 
 
