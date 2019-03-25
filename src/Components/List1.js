@@ -1,9 +1,9 @@
 import React from 'react'
 
-function List1() {
+function List1({match}) {
   return (
     <div>
-      <h1> List 1</h1>
+          <h1> {match.params.topicId}}</h1>
     </div>
   )
 }

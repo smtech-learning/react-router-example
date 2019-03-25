@@ -4,14 +4,36 @@ import List1 from './List1';
 import List2 from './List2';
 import ListCatchAll from './ListCatchAll';
 
- function List() {
+
+
+function List({ match }) {
   return (
     <div>
           <h1> List</h1>
-          <NavLink to='/list1'> List1</NavLink> |
-          <NavLink to='/list2'> List2</NavLink> 
+          <NavLink to={`${match.url}/wonderfull-world`}> List1</NavLink> |
+          <Link to={`${match.url}/components`}>Components</Link>
+
+            <hr />
+          <Route path={`${match.path}/:topicId`} component={Topic} />
+              
+              <Route
+        exact
+        path={match.path}
+        render={() => <h3>Please select a topic.</h3>}
+              />
+              
+           
+
     </div>
   )
  }
 
+ function Topic({ match }) {
+    return (
+      <div>
+        <h3>{match.params.topicId}</h3>
+      </div>
+    );
+}
+  
 export default List;
