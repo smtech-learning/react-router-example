@@ -8,18 +8,8 @@ import ListCatchAll from './ListCatchAll';
   return (
     <div>
           <h1> List</h1>
-          <NavLink to='/list/list1'> List1</NavLink> |
-          <NavLink to='/list/list2'> List2</NavLink> 
-          
-          <Switch>
-          <Route path="/list/list1" exact component={List1} />
-          <Route path="/list/list2" exact component={List2} />
-          <Route path="*"  component={ListCatchAll} />
-          
-          
-          </Switch>
-
-                  
+          <NavLink to='/list1'> List1</NavLink> |
+          <NavLink to='/list2'> List2</NavLink> 
     </div>
   )
  }

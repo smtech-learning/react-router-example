@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link, Switch , NavLink} from "react-router-dom";
-
 import './App.css';
 import Menu from './Components/Menu';
 import List from './Components/List';
@@ -23,7 +22,6 @@ class App extends Component {
             <Route path="/list" exact component={List} >
                 <Route path="/list1" exact component={List1} />
                 <Route path="/list2" exact component={List2} />
-
             </Route>
             <Route path="*" component={CatchAll} />
           </Switch>
