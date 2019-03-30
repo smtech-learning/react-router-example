@@ -3,9 +3,12 @@ import React from "react";
 function Topic({ match }) {
   return (
     <div>
-      <h3>{match.params.topicId}</h3>
+    {console.log(match.url)}
+      <h3>{match.params.topicId1}</h3>
     </div>
   );
 }
 
 export default Topic;
+
+  

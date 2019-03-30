@@ -18,7 +18,8 @@ function Topics({ match }) {
         </li>
       </ul>
 
-      <Route path={`${match.path}/:topicId`} component={Topic} />
+      <Route path={`${match.path}/:topicId1`} component={Topic} />
+
       <Route 
         exact
         path={match.path}
